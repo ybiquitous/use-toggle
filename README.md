@@ -38,7 +38,6 @@ function Show() {
     <p>
       <button onClick={show}>Show</button>
       <button onClick={hide}>Hide</button>
-      <br />
       {isShown && <strong>Hello</strong>}
     </p>
   );
