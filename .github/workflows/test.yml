@@ -20,7 +20,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm --global install npm@latest
       - run: npm ci
-      - run: npm install 'react@${{ matrix.react-version }}'
+      - run: npm install 'react@${{ matrix.react-version }}' 'react-test-renderer@${{ matrix.react-version }}'
       - run: npm run lint
       - run: npm test
       - run: npm run release:dry-run
