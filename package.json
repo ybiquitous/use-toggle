@@ -6,6 +6,7 @@
   "license": "MIT",
   "keywords": [
     "react",
+    "hooks",
     "utility"
   ],
   "repository": "ybiquitous/use-toggle",
