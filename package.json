@@ -5,7 +5,7 @@
   "author": "Masafumi Koba",
   "license": "MIT",
   "repository": "ybiquitous/use-toggle",
-  "main": "dist/index.js",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "peerDependencies": {
     "react": ">=16"
