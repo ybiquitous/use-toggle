@@ -19,7 +19,7 @@ npm install @ybiquitous/use-toggle
 ```jsx
 import useToggle from "@ybiquitous/use-toggle";
 
-function App() {
+function Check() {
   const [checked, check, uncheck, toggle] = useToggle();
 
   return (
@@ -29,6 +29,28 @@ function App() {
       <button onClick={uncheck}>Uncheck</button>
       <button onClick={() => toggle(true)}>Toggle with argument</button>
     </p>
+  );
+}
+
+function Show() {
+  const [isShown, show, hide] = useToggle();
+
+  return (
+    <p>
+      <button onClick={show}>Show</button>
+      <button onClick={hide}>Hide</button>
+      <br />
+      {isShown && <strong>Hello</strong>}
+    </p>
+  );
+}
+
+export default function App() {
+  return (
+    <>
+      <Check />
+      <Show />
+    </>
   );
 }
 ```
