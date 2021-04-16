@@ -4,7 +4,7 @@
 
 React `useToggle()` utility hook.
 
-- React 16+
+- React 16.8+
 - No dependencies
 - TypeScript support
 
