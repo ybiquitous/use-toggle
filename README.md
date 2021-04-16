@@ -54,16 +54,21 @@ This utility hook aims to reduce the following boilerplate using [`useState()`](
 
 ```jsx
 function App() {
-  const [isShown, setShown] = useState(false)
+  const [isShown, setShown] = useState(false);
   const toggle = setShown((state) => !state);
-  const show = () => setShown(true)
-  const hide = () => setShown(false)
+  const show = () => setShown(true);
+  const hide = () => setShown(false);
 
-  <button onClick={show}>Show</button>
-  <button onClick={hide}>Hide</button>
+  const showButton = <button onClick={show}>Show</button>;
+  const hideButton = <button onClick={hide}>Hide</button>;
 
   // ...
 }
 ```
 
 In addition, this package benefits performance by [`useCallback()`](https://reactjs.org/docs/hooks-reference.html#usecallback).
+This means that it is equivalent to:
+
+```js
+const show = useCallback(() => setShown(true), [setShown]);
+```
