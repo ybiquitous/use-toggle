@@ -11,17 +11,20 @@ npm install @ybiquitous/use-toggle
 ## Usage
 
 ```jsx
-import { useToggle } from "@ybiquitous/use-toggle";
+import useToggle from "@ybiquitous/use-toggle";
 
 function App() {
-  const [yesOrNo, yes, no, toggle] = useToggle();
+  const [checked, check, uncheck, toggle] = useToggle();
 
   return (
-    <div>
-      <button onClick={toggle}>{yesOrNo ? "Yes" : "No"}</button>
-      <button onClick={yes}>Say 'Yes'</button>
-      <button onClick={no}>Say 'No'</button>
-    </div>
+    <p>
+      <input type="checkbox" checked={checked} />
+      <button onClick={check}>Check</button>
+      <button onClick={uncheck}>Uncheck</button>
+      <button onClick={toggle}>Toggle</button>
+      <button onClick={() => toggle(true)}>Check via toggle()</button>
+      <button onClick={() => toggle(false)}>Uncheck via toggle()</button>
+    </p>
   );
 }
 ```
