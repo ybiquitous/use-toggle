@@ -44,15 +44,6 @@ function Show() {
     </p>
   );
 }
-
-export default function App() {
-  return (
-    <>
-      <Check />
-      <Show />
-    </>
-  );
-}
 ```
 
 See also the [online demo](https://codesandbox.io/s/vigorous-frost-199yl)!
