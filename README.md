@@ -50,7 +50,7 @@ See also the [online demo](https://codesandbox.io/s/vigorous-frost-199yl)!
 
 ## Why not useState()
 
-This utility hook aims to reduce the following boilerplate when using [`useState()`](https://reactjs.org/docs/hooks-reference.html#usestate):
+This utility hook aims to reduce the following boilerplate using [`useState()`](https://reactjs.org/docs/hooks-reference.html#usestate):
 
 ```jsx
 function App() {
