@@ -4,6 +4,10 @@
   "description": "React useToggle() utility",
   "author": "Masafumi Koba",
   "license": "MIT",
+  "keywords": [
+    "react",
+    "utility"
+  ],
   "repository": "ybiquitous/use-toggle",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
