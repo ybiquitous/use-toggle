@@ -1,0 +1,96 @@
+{
+  "name": "@ybiquitous/use-toggle",
+  "version": "0.0.1",
+  "description": "React useToggle() utility",
+  "author": "Masafumi Koba",
+  "license": "MIT",
+  "repository": "ybiquitous/use-toggle",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "devDependencies": {
+    "@testing-library/react-hooks": "^5.1.1",
+    "@types/jest": "^26.0.22",
+    "@types/react": "^17.0.3",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "eslint-config-ybiquitous": "^13.2.0",
+    "eslint-plugin-jest": "^24.3.5",
+    "jest": "^26.6.3",
+    "react": "^17.0.2",
+    "react-test-renderer": "^17.0.2",
+    "remark-preset-ybiquitous": "^0.0.3",
+    "ts-jest": "^26.5.5",
+    "typescript": "^4.2.4",
+    "ybiq": "^12.2.2"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "posttest": "tsc",
+    "lint:js": "eslint .",
+    "lint:js:fix": "npm run lint:js -- --fix",
+    "lint:md": "remark . --frail",
+    "lint:md:fix": "remark . --output",
+    "lint:types": "tsc --noEmit",
+    "lint": "npm-run-all --print-label --parallel lint:* prettier:check",
+    "prettier": "prettier --ignore-path .gitignore .",
+    "prettier:check": "npm run prettier -- --check",
+    "prettier:write": "npm run prettier -- --write",
+    "format": "npm-run-all --print-label --parallel lint:*:fix prettier:write",
+    "clean": "git clean -dx --force --exclude=node_modules --exclude=.husky",
+    "prerelease": "git switch main && git pull && npm ci && npm run clean && npm test && npm run lint && npm run clean",
+    "release": "standard-version",
+    "release:dry-run": "standard-version --dry-run",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{js,jsx,mjs,ts,tsx}": "eslint --fix",
+    "!(*.snap)": "prettier --write",
+    "!(CHANGELOG).md": "remark --frail"
+  },
+  "standard-version": {
+    "sign": true,
+    "scripts": {
+      "postchangelog": "prettier --write CHANGELOG.md"
+    }
+  },
+  "remarkConfig": {
+    "plugins": [
+      "remark-preset-ybiquitous"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "body-max-line-length": [
+        1,
+        "always",
+        100
+      ]
+    }
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "ybiquitous/typescript",
+      "plugin:jest/recommended",
+      "plugin:jest/style"
+    ],
+    "parserOptions": {
+      "project": "./tsconfig.test.json"
+    },
+    "ignorePatterns": [
+      "coverage",
+      "dist"
+    ],
+    "reportUnusedDisableDirectives": true
+  },
+  "jest": {
+    "preset": "ts-jest"
+  }
+}
