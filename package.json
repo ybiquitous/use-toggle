@@ -1,6 +1,6 @@
 {
   "name": "@ybiquitous/use-toggle",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "React useToggle() utility hook",
   "author": "Masafumi Koba",
   "license": "MIT",

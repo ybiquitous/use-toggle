@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/ybiquitous/use-toggle/compare/v0.0.3...v0.0.4) (2021-04-16)
+
+### Bug Fixes
+
+- drop `toggle(boolean)` support ([#6](https://github.com/ybiquitous/use-toggle/issues/6)) ([7da1459](https://github.com/ybiquitous/use-toggle/commit/7da1459da1f9ef831c1bf0116be594bfe61c1b8c))
+- update peer react version `>=16.8` ([#5](https://github.com/ybiquitous/use-toggle/issues/5)) ([a4f6c4b](https://github.com/ybiquitous/use-toggle/commit/a4f6c4b48a80609c803a5170c4d802b4218b4d48))
+
 ### [0.0.3](https://github.com/ybiquitous/use-toggle/compare/v0.0.2...v0.0.3) (2021-04-16)
 
 ### Bug Fixes
