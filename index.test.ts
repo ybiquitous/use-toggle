@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access */
 import { act, renderHook } from "@testing-library/react-hooks";
 import useToggle from "./index";
 
@@ -70,4 +69,3 @@ test("toggle switch", () => {
 
   expect(result.current[0]).toBe(false);
 });
-/* eslint-enable */

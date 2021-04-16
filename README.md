@@ -24,10 +24,9 @@ function Check() {
 
   return (
     <p>
-      <input type="checkbox" checked={checked} onChange={() => toggle()} />
+      <input type="checkbox" checked={checked} onChange={toggle} />
       <button onClick={check}>Check</button>
       <button onClick={uncheck}>Uncheck</button>
-      <button onClick={() => toggle(true)}>Toggle with argument</button>
     </p>
   );
 }

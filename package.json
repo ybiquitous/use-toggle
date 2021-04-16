@@ -42,7 +42,7 @@
     "lint:js:fix": "npm run lint:js -- --fix",
     "lint:md": "remark . --frail",
     "lint:md:fix": "remark . --output",
-    "lint:types": "tsc --noEmit",
+    "lint:types": "tsc --noEmit --project tsconfig.test.json",
     "lint": "npm-run-all --print-label --parallel lint:* prettier:check",
     "prettier": "prettier --ignore-path .gitignore .",
     "prettier:check": "npm run prettier -- --check",
