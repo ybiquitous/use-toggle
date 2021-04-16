@@ -7,6 +7,9 @@
   "repository": "ybiquitous/use-toggle",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
   "peerDependencies": {
     "react": ">=16"
   },
@@ -44,7 +47,8 @@
     "prerelease": "git switch main && git pull && npm ci && npm run clean && npm test && npm run lint && npm run clean",
     "release": "standard-version",
     "release:dry-run": "standard-version --dry-run",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prepublishOnly": "npm test"
   },
   "lint-staged": {
     "*.{js,jsx,mjs,ts,tsx}": "eslint --fix",
