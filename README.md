@@ -1,6 +1,12 @@
 # useToggle()
 
+[![npm](https://img.shields.io/npm/v/@ybiquitous/use-toggle.svg)](https://www.npmjs.com/package/@ybiquitous/use-toggle)
+
 React `useToggle()` utility.
+
+- React 16+
+- No dependencies
+- TypeScript support
 
 ## Install
 
