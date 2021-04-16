@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/@ybiquitous/use-toggle.svg)](https://www.npmjs.com/package/@ybiquitous/use-toggle)
 
-React `useToggle()` hook utility.
+React `useToggle()` utility hook.
 
 - React 16+
 - No dependencies
@@ -47,3 +47,23 @@ function Show() {
 ```
 
 See also the [online demo](https://codesandbox.io/s/vigorous-frost-199yl)!
+
+## Why not useState()
+
+This utility hook aims to reduce the following boilerplate when using [`useState()`](https://reactjs.org/docs/hooks-reference.html#usestate):
+
+```jsx
+function App() {
+  const [isShown, setShown] = useState(false)
+  const toggle = setShown((state) => !state);
+  const show = () => setShown(true)
+  const hide = () => setShown(false)
+
+  <button onClick={show}>Show</button>
+  <button onClick={hide}>Hide</button>
+
+  // ...
+}
+```
+
+In addition, this package benefits performance by [`useCallback()`](https://reactjs.org/docs/hooks-reference.html#usecallback).
