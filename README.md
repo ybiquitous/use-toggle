@@ -27,10 +27,11 @@ function App() {
       <input type="checkbox" checked={checked} />
       <button onClick={check}>Check</button>
       <button onClick={uncheck}>Uncheck</button>
-      <button onClick={toggle}>Toggle</button>
-      <button onClick={() => toggle(true)}>Check via toggle()</button>
-      <button onClick={() => toggle(false)}>Uncheck via toggle()</button>
+      <button onClick={() => toggle()}>Toggle</button>
+      <button onClick={() => toggle(true)}>Toggle with boolean</button>
     </p>
   );
 }
 ```
+
+See also the [online demo](https://codesandbox.io/s/vigorous-frost-199yl)!
