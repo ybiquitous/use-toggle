@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/ybiquitous/use-toggle/compare/v0.0.4...v0.0.5) (2021-04-20)
+
+### Bug Fixes
+
+- conditional exports for ESM and CJS ([#7](https://github.com/ybiquitous/use-toggle/issues/7)) ([e2d2348](https://github.com/ybiquitous/use-toggle/commit/e2d23489cb278eabb4ad0d965a8d3475fb7cb839))
+
 ### [0.0.4](https://github.com/ybiquitous/use-toggle/compare/v0.0.3...v0.0.4) (2021-04-16)
 
 ### Bug Fixes
