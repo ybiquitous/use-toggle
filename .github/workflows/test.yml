@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    name: test (Node ${{ matrix.node-version }}, React ${{ matrix.react-version }}
+    name: test (Node ${{ matrix.node-version }}, React ${{ matrix.react-version }})
     runs-on: ubuntu-latest
     strategy:
       matrix:
