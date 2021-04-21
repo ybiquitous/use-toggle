@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/ybiquitous/use-toggle/compare/v0.0.5...v0.0.6) (2021-04-21)
+
+### Bug Fixes
+
+- use relative paths in package.json ([#8](https://github.com/ybiquitous/use-toggle/issues/8)) ([c80a6d5](https://github.com/ybiquitous/use-toggle/commit/c80a6d5d370f41c5f197e14487c5c9eff77d9926))
+
 ### [0.0.5](https://github.com/ybiquitous/use-toggle/compare/v0.0.4...v0.0.5) (2021-04-20)
 
 ### Bug Fixes
