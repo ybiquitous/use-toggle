@@ -4,6 +4,9 @@
   "description": "React useToggle() utility hook",
   "author": "Masafumi Koba",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "react",
     "hooks",
