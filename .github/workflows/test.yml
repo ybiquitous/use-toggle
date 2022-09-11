@@ -22,8 +22,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm --global install npm@latest
       - run: npm ci
-      - run: npm install 'react@${{ matrix.react-version }}' 'react-test-renderer@${{ matrix.react-version }}'
-        if: ${{ matrix.react-version != '17' }}
+      - run: npm install 'react@${{ matrix.react-version }}' '@testing-library/react@12'
+        if: ${{ matrix.react-version == '16' || matrix.react-version == '17' }}
       - run: npm run lint
       - run: npm test
       - run: npm run release:dry-run
