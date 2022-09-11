@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/@ybiquitous/use-toggle.svg)](https://www.npmjs.com/package/@ybiquitous/use-toggle)
 
-React `useToggle()` hook.
+React `useToggle()` hook, which makes it easy to handle a _togglable_ (boolean) state.
 
 - React 16.8+
 - No dependencies
