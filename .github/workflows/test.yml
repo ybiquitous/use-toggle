@@ -24,6 +24,7 @@ jobs:
       - run: npm ci
       - run: npm install --save-dev 'react@${{ matrix.react-version }}' 'react-dom@${{ matrix.react-version }}' '@testing-library/react@12'
         if: ${{ matrix.react-version == '16' || matrix.react-version == '17' }}
+      - run: npm ls
       - run: npm run lint
       - run: npm test
       - run: npm run release:dry-run
