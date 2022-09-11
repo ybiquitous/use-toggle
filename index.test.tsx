@@ -6,31 +6,31 @@ import useToggle from "./index";
 test("initial state", () => {
   const Foo = () => {
     const [checked] = useToggle();
-    return <div>{`checked: ${checked}`}</div>;
+    return <button>{`checked: ${checked}`}</button>;
   };
   render(<Foo />);
 
-  expect(screen.getByText("checked: false")).toBeInTheDocument();
+  expect(screen.getByRole("button")).toHaveTextContent("checked: false");
 });
 
 test("initial state with `true`", () => {
   const Foo = () => {
     const [checked] = useToggle(true);
-    return <div>{`checked: ${checked}`}</div>;
+    return <button>{`checked: ${checked}`}</button>;
   };
   render(<Foo />);
 
-  expect(screen.getByText("checked: true")).toBeInTheDocument();
+  expect(screen.getByRole("button")).toHaveTextContent("checked: true");
 });
 
 test("initial state with `false`", () => {
   const Foo = () => {
     const [checked] = useToggle(false);
-    return <div>{`checked: ${checked}`}</div>;
+    return <button>{`checked: ${checked}`}</button>;
   };
   render(<Foo />);
 
-  expect(screen.getByText("checked: false")).toBeInTheDocument();
+  expect(screen.getByRole("button")).toHaveTextContent("checked: false");
 });
 
 test("toggle on", () => {
