@@ -14,11 +14,7 @@
   ],
   "repository": "ybiquitous/use-toggle",
   "type": "module",
-  "exports": {
-    "import": "./dist/index.js",
-    "require": "./dist/cjs/index.js"
-  },
-  "main": "./dist/cjs/index.js",
+  "exports": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist/"
@@ -48,9 +44,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "posttest": "npm-run-all --print-label --parallel build build:*",
+    "posttest": "npm run build",
     "build": "tsc",
-    "build:cjs": "tsc --project tsconfig.cjs.json",
     "lint:js": "eslint --cache --ext=js,jsx,cjs,mjs,ts,tsx .",
     "lint:js:fix": "npm run lint:js -- --fix",
     "lint:md": "remark . --frail",
