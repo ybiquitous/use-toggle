@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/ybiquitous/use-toggle/compare/v0.0.7...v0.1.0) (2022-09-11)
+
+### ⚠ BREAKING CHANGES
+
+- remove CJS support (#31)
+
+### Features
+
+- remove CJS support ([#31](https://github.com/ybiquitous/use-toggle/issues/31)) ([7f8aced](https://github.com/ybiquitous/use-toggle/commit/7f8aced828f14b66f8d9862657445793112e18c7))
+
+### Bug Fixes
+
+- add JSDoc ([#30](https://github.com/ybiquitous/use-toggle/issues/30)) ([db67d35](https://github.com/ybiquitous/use-toggle/commit/db67d357ad4482bd134438781eea9eaadd5c8934))
+
 ### [0.0.7](https://github.com/ybiquitous/use-toggle/compare/v0.0.6...v0.0.7) (2021-04-26)
 
 ### [0.0.6](https://github.com/ybiquitous/use-toggle/compare/v0.0.5...v0.0.6) (2021-04-21)
