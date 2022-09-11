@@ -3,5 +3,5 @@
   "compilerOptions": {
     "moduleResolution": "node"
   },
-  "files": ["./index.test.ts"]
+  "files": ["./index.test.tsx"]
 }
