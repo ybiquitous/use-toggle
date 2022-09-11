@@ -51,7 +51,7 @@ test("toggle on", () => {
 
 test("toggle off", () => {
   const Foo = () => {
-    const [checked, _, uncheck] = useToggle(true);
+    const [checked, , uncheck] = useToggle(true);
     return <button onClick={uncheck}>{`checked: ${checked}`}</button>;
   };
   render(<Foo />);
@@ -67,7 +67,7 @@ test("toggle off", () => {
 
 test("toggle switch", () => {
   const Foo = () => {
-    const [checked, _check, _uncheck, toggle] = useToggle(false);
+    const [checked, , , toggle] = useToggle(false);
     return <button onClick={toggle}>{`checked: ${checked}`}</button>;
   };
   render(<Foo />);
