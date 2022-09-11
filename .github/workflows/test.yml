@@ -8,18 +8,17 @@ on:
 
 jobs:
   test:
-    name: test (Node ${{ matrix.node-version }}, React ${{ matrix.react-version }})
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        node-version: ["14", "16", "18"]
         react-version: ["16", "17", "18"]
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: "lts/*"
+          cache: npm
       - run: npm --global install npm@latest
       - run: npm ci
       - run: npm install --save-dev 'react@${{ matrix.react-version }}' 'react-dom@${{ matrix.react-version }}' '@testing-library/react@12'
