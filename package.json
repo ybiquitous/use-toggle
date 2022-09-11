@@ -62,7 +62,8 @@
     "prerelease": "git switch main && git pull && npm ci && npm run clean && npm test && npm run clean",
     "release": "standard-version",
     "release:dry-run": "standard-version --dry-run",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prepack": "npm run build"
   },
   "lint-staged": {
     "*.{js,jsx,cjs,mjs,ts,tsx}": "eslint --cache --fix",
