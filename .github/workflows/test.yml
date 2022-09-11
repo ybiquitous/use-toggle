@@ -26,3 +26,6 @@ jobs:
         if: ${{ matrix.react-version == '16' || matrix.react-version == '17' }}
       - run: npm test --ignore-scripts
       - run: npm run posttest
+
+  lint:
+    uses: ybiquitous/.github/.github/workflows/nodejs-lint-reusable.yml@main
