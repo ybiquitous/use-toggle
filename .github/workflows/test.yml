@@ -11,6 +11,7 @@ jobs:
     name: test (Node ${{ matrix.node-version }}, React ${{ matrix.react-version }})
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         node-version: ["14", "16", "18"]
         react-version: ["16", "17", "18"]
