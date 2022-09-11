@@ -1,7 +1,7 @@
 {
   "name": "@ybiquitous/use-toggle",
   "version": "0.0.7",
-  "description": "React useToggle() utility hook",
+  "description": "React useToggle() hook",
   "author": "Masafumi Koba",
   "license": "MIT",
   "publishConfig": {
@@ -27,7 +27,7 @@
     "react": ">=16.8"
   },
   "devDependencies": {
-    "@testing-library/react-hooks": "^5.1.2",
+    "@testing-library/react-hooks": "^8.0.1",
     "@types/jest": "^26.0.22",
     "@types/react": "^17.0.3",
     "@typescript-eslint/eslint-plugin": "^4.22.0",

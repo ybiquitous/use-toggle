@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/@ybiquitous/use-toggle.svg)](https://www.npmjs.com/package/@ybiquitous/use-toggle)
 
-React `useToggle()` utility hook.
+React `useToggle()` hook.
 
 - React 16.8+
 - No dependencies
