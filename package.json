@@ -29,7 +29,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
-    "@types/jest": "^29.0.0",
+    "@types/jest": "^29.0.1",
     "@types/react": "^18.0.19",
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "eslint-config-ybiquitous": "^16.0.0",
@@ -44,32 +44,34 @@
     "ybiq": "^15.4.1"
   },
   "scripts": {
+    "pretest": "npm run lint",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "posttest": "npm-run-all --print-label --parallel build build:*",
     "build": "tsc",
     "build:cjs": "tsc --project tsconfig.cjs.json",
-    "lint:js": "eslint .",
+    "lint:js": "eslint --cache --ext=js,jsx,cjs,mjs,ts,tsx .",
     "lint:js:fix": "npm run lint:js -- --fix",
     "lint:md": "remark . --frail",
     "lint:md:fix": "remark . --output",
     "lint:types": "tsc --noEmit --project tsconfig.test.json",
-    "lint": "npm-run-all --print-label --parallel lint:* prettier:check",
-    "prettier": "prettier --ignore-path .gitignore .",
-    "prettier:check": "npm run prettier -- --check",
-    "prettier:write": "npm run prettier -- --write",
-    "format": "npm-run-all --print-label --parallel lint:*:fix prettier:write",
+    "lint:types:watch": "npm run lint:types -- --watch",
+    "lint:styles": "npm run prettier -- --check",
+    "lint:styles:fix": "npm run prettier -- --write",
+    "lint:commit": "commitlint --from HEAD~10",
+    "lint": "npm-run-all --print-label --silent --parallel lint:*",
+    "prettier": "prettier --cache --ignore-path .gitignore .",
+    "format": "npm-run-all --print-label --silent --parallel lint:*:fix",
     "clean": "git clean -dx --force --exclude=node_modules --exclude=.husky",
-    "prerelease": "git switch main && git pull && npm ci && npm run clean && npm test && npm run lint && npm run clean",
+    "prerelease": "git switch main && git pull && npm ci && npm run clean && npm test && npm run clean",
     "release": "standard-version",
     "release:dry-run": "standard-version --dry-run",
-    "prepare": "husky install",
-    "prepublishOnly": "npm test"
+    "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{js,jsx,mjs,ts,tsx}": "eslint --fix",
-    "!(*.snap)": "prettier --write",
+    "*.{js,jsx,cjs,mjs,ts,tsx}": "eslint --cache --fix",
+    "!(*.snap)": "prettier --cache --write",
     "!(CHANGELOG).md": "remark --frail"
   },
   "standard-version": {
@@ -108,7 +110,8 @@
     },
     "ignorePatterns": [
       "coverage",
-      "dist"
+      "dist",
+      "tmp"
     ],
     "reportUnusedDisableDirectives": true,
     "overrides": [
