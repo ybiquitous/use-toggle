@@ -43,8 +43,8 @@
   "scripts": {
     "pretest": "npm run lint",
     "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
+    "test:watch": "npm --ignore-scripts test -- --watch",
+    "test:coverage": "npm --ignore-scripts test -- --coverage",
     "posttest": "npm run build",
     "build": "tsc",
     "lint:js": "eslint --cache --ext=js,jsx,cjs,mjs,ts,tsx .",
