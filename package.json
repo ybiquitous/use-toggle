@@ -27,7 +27,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@types/jest": "^29.1.1",
-    "@types/react": "^18.0.19",
+    "@types/react": "^18.0.25",
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "eslint-config-ybiquitous": "^16.0.0",
     "eslint-plugin-jest": "^27.0.4",
