@@ -5,7 +5,8 @@
   "author": "Masafumi Koba",
   "license": "MIT",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "keywords": [
     "react",
