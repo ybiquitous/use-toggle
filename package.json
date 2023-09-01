@@ -39,7 +39,7 @@
     "remark-preset-ybiquitous": "^0.3.1",
     "ts-jest": "^29.1.1",
     "typescript": "^5.2.2",
-    "ybiq": "^16.1.0"
+    "ybiq": "^16.2.1"
   },
   "scripts": {
     "pretest": "npm run lint",
