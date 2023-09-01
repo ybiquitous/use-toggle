@@ -58,7 +58,7 @@
     "lint:styles:fix": "npm run prettier -- --write",
     "lint:commit": "commitlint --from HEAD~10",
     "lint": "npm-run-all --print-label --silent --parallel lint:*",
-    "prettier": "prettier --cache --ignore-path .gitignore .",
+    "prettier": "prettier --cache .",
     "format": "npm-run-all --print-label --silent --parallel lint:*:fix",
     "clean": "git clean -dx --force --exclude=node_modules --exclude=.husky",
     "prerelease": "git switch main && git pull && npm ci && npm run clean && npm test && npm run clean",
