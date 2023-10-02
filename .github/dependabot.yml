@@ -4,7 +4,13 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
-    versioning-strategy: increase
+    versioning-strategy: "increase"
+    groups:
+      dev-deps:
+        dependency-type: "development"
+        exclude-patterns: ["react", "react-dom"]
+      react:
+        patterns: ["react", "react-dom"]
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
