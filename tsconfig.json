@@ -14,7 +14,7 @@
     "noPropertyAccessFromIndexSignature": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
   },
-  "files": ["./index.ts"]
+  "files": ["./index.ts"],
 }
