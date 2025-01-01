@@ -30,7 +30,7 @@ jobs:
           echo "Installed npm version: $(npm --version)"
       - name: Install dependencies
         run: npm ci
-      - name: Install React dependencies
+      - name: Install React ${{ matrix.react-version }} dependencies
         if: ${{ matrix.react-version != '19' }}
         env:
           REACT_VERSION: ${{ matrix.react-version }}
@@ -40,6 +40,7 @@ jobs:
           else
             npm install --save-dev "react@${REACT_VERSION}" "react-dom@${REACT_VERSION}"
           fi
+          npm ls
       - name: Test
         run: npm test --ignore-scripts
       - name: Build
