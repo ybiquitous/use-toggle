@@ -15,19 +15,36 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        react-version: ["16", "17", "18"]
+        react-version: ["16", "17", "18", "19"]
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Check out
+        uses: actions/checkout@v4
+      - name: Set up Node.js LTS
+        uses: actions/setup-node@v4
         with:
           node-version: "lts/*"
           cache: npm
-      - run: npm --global install npm@latest
-      - run: npm ci
-      - run: npm install --save-dev 'react@${{ matrix.react-version }}' 'react-dom@${{ matrix.react-version }}' '@testing-library/react@12'
-        if: ${{ matrix.react-version == '16' || matrix.react-version == '17' }}
-      - run: npm test --ignore-scripts
-      - run: npm run build
+      - name: Install latest npm
+        run: |
+          npm --global install npm@latest
+          echo "Installed npm version: $(npm --version)"
+      - name: Install dependencies
+        run: npm ci
+      - name: Install React ${{ matrix.react-version }} dependencies
+        if: ${{ matrix.react-version != '19' }}
+        env:
+          REACT_VERSION: ${{ matrix.react-version }}
+        run: |
+          if [[ $REACT_VERSION =~ ^(16|17) ]]; then
+            npm install --save-dev "react@${REACT_VERSION}" "react-dom@${REACT_VERSION}" '@testing-library/react@12'
+          else
+            npm install --save-dev "react@${REACT_VERSION}" "react-dom@${REACT_VERSION}"
+          fi
+          npm ls
+      - name: Test
+        run: npm test --ignore-scripts
+      - name: Build
+        run: npm run build
 
   lint:
     uses: ybiquitous/.github/.github/workflows/nodejs-lint-reusable.yml@main
