@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/ybiquitous/use-toggle/compare/v0.1.1...v0.1.2) (2025-01-01)
+
+### Features
+
+- **deps:** support React 19 ([#141](https://github.com/ybiquitous/use-toggle/issues/141)) ([6432849](https://github.com/ybiquitous/use-toggle/commit/643284942dd378baa6027e5d58ed88f2cc45bf2d))
+
 ### [0.1.1](https://github.com/ybiquitous/use-toggle/compare/v0.1.0...v0.1.1) (2022-12-02)
 
 ### Bug Fixes
