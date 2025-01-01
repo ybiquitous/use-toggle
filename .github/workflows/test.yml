@@ -15,7 +15,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        react-version: ["16", "17", "18"]
+        react-version: ["16", "17", "18", "19"]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
