@@ -29,7 +29,7 @@
     "@testing-library/react": "^16.2.0",
     "@types/jest": "^29.5.14",
     "@types/react": "^19.0.12",
-    "@typescript-eslint/eslint-plugin": "^8.22.0",
+    "@typescript-eslint/eslint-plugin": "^8.29.0",
     "eslint-config-ybiquitous": "^21.1.0",
     "eslint-plugin-jest": "^28.11.0",
     "jest": "^29.7.0",
@@ -37,8 +37,8 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "remark-preset-ybiquitous": "^0.4.4",
-    "ts-jest": "^29.2.5",
-    "typescript": "^5.7.3",
+    "ts-jest": "^29.3.1",
+    "typescript": "^5.8.2",
     "ybiq": "^17.4.0"
   },
   "scripts": {
