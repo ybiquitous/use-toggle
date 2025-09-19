@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **This package is deprecated and will no longer be maintained.**
+
 # useToggle()
 
 [![npm](https://img.shields.io/npm/v/@ybiquitous/use-toggle.svg)](https://www.npmjs.com/package/@ybiquitous/use-toggle)
